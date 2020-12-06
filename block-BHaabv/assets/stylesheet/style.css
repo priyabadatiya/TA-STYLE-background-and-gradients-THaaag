@@ -1,0 +1,374 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/*----------------------------------------- css reset ends here-------------------------------------- */
+
+body {
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: "Roboto", sans-serif;
+    background-color: rgb(29, 32, 41);
+    color: aliceblue;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    padding: 40px 0 80px 0;
+    background-color: rgb(32, 34, 47);
+}
+
+.header h1 {
+    font-size: 40px;
+}
+
+.header h5 {
+    font-size: 20px;
+    color: rgb(144, 152, 191);
+}
+
+.button span {
+    color: rgb(144, 152, 191);
+}
+
+.icon {
+    height: 1.5rem;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+
+/* switch dark mode */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-left: 18px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgb(64, 131, 175), rgb(59, 206, 145));
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background: #ccc;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.btn {
+    background: linear-gradient(to right, rgb(64, 131, 175), rgb(59, 206, 145));
+}
+
+
+/* <---------------------------main-------------------------------> */
+
+.card-container {
+    padding: 60px 0;
+}
+
+.card {
+    background-color: rgb(37, 43, 67);
+    padding: 32px;
+    text-align: center;
+    width: 24%;
+    position: relative;
+    color: rgb(144, 152, 191);
+    border: 8px;
+}
+
+.card img {
+    margin-right: 8px;
+}
+
+.card h2 {
+    font-size: 55px;
+    color: white;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.card-body p {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 300;
+    margin-top: 5px;
+}
+
+.card-body {
+    padding: 32px 0;
+}
+
+.card-footer img {
+    margin-right: 3px;
+    width: 12px;
+}
+
+.card-footer span {
+    color: rgb(33, 137, 116);
+    font-size: 20px;
+}
+
+.border-top {
+    width: 100%;
+    height: 4px;
+    background-color: rgb(34, 160, 235);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-tweet .border-top {
+    background-color: rgb(34, 160, 235);
+}
+
+.card-insta .border-top {
+    background: linear-gradient(to right, rgb(253, 185, 106), rgb(222, 81, 145));
+}
+
+.card-youtube .border-top {
+    background-color: rgb(194, 3, 41);
+}
+
+.card-footer .red {
+    color: rgb(194, 3, 41);
+}
+
+.overview h2 {
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+.overview-card .card-header {
+    margin-bottom: 25px;
+}
+
+.overview-card {
+    margin-top: 35px;
+}
+
+.overview-card h3 {
+    font-size: 40px;
+    color: white;
+    font-weight: 700;
+}
+
+.overview-card span {
+    font-size: 15px;
+    color: rgb(33, 137, 116);
+}
+
+.overview-card .up {
+    width: 12px;
+    margin-right: 5px;
+}
+
+.overview-card .red {
+    color: rgb(194, 3, 41);
+}
